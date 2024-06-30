@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Republic Philippines - Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        body, h1, h2, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Calibri, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-banner-container {
+            position: relative;
+            background-image: url('https://theme.hstatic.net/200000370337/1000775944/14/header_pageabout.jpg?v=241');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+
+        header {
+            padding: 20px 0;
+        }
+
+        .logo img {
+            max-width: 175px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            gap: 20px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #92bd42;
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 50px;
+            background-color: #ffffff;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 50vh;
+            margin-bottom: 20px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .product-section .product {
+            background-color: white;
+            border-radius: 8px;
+            margin: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            height: 100%;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-section .product:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f9f9f9;
+        }
+
+        .product-section .product h2 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .product-section .product p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .product-section .product img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart-btn {
+            display: inline-block;
+            background-color: #5e7e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-family: system-ui, sans-serif;
+            border-radius: 4px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #cfe4aa;
+        }
+
+        footer {
+            background-color: #7aa035;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .col-md-4, .col-lg-3 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: end;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #92bd42;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #7aa035;
+            border-radius: 0;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #556e25;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner-container {
+                height: 250px;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                gap: 0;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-height: 300px;
+                overflow-y: auto;
+            }
+
+            .navbar-nav .nav-item {
+                width: 100%;
+                text-align: center;
+                margin-right: 0;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee; 
+            }
+
+            .navbar-nav .nav-link {
+                color: #334e00;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+                width: 100%;
+                padding: 10px 30px;
+                box-sizing: border-box;
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: #92bd42;
+            }
+
+            .swiper {
+                height: 300px;
+            }
+        }
+
+        .category-title {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 2em;
+            color: #334e00;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <div class="header-banner-container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://naturerepublic.com.ph/cdn/shop/files/NR_Official_Logo_x20.png?v=1618378505" alt="Nature Republic Logo">
+                    </a>
+                    <!-- Navbar toggler button -->
+                    <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Navbar items -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order-now.html">Order Now</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faqs.html">FAQS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <!-- Skincare Section -->
+        <section class="product-section">
+            <div class="container">
+                <h2 class="category-title">Skincare</h2>
+                <div class="row justify-content-around">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98u-lsjh3odr4u2s1a" alt="Product 1">
+                            <h2>Nature Republic Soothing And Moisture Aloe Vera 92% Soothing Gel (TUB)</h2>
+                            <p>₱245</p>
+                            <a href="https://shopee.ph/Nature-Republic-Soothing-And-Moisture-Aloe-Vera-92-Soothing-Gel-(TUB)-i.80716437.1354990513?sp_atk=5198b136-32ad-4910-a149-4443ccb7ff02&xptdk=5198b136-32ad-4910-a149-4443ccb7ff02" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98o-ls824psn9wc5b5" alt="Product 2">
+                            <h2>NATURE REPUBLIC CALIFORNIA ALOE FRESH POWDERY SUN STICK SPF50+PA++++</h2>
+                            <p>₱795</p>
+                            <a href="https://shopee.ph/NATURE-REPUBLIC-CALIFORNIA-ALOE-FRESH-POWDERY-SUN-STICK-SPF50-PA--i.80716437.5851352541?sp_atk=96ca7a43-38dc-4f43-89da-1070fdb09734&xptdk=96ca7a43-38dc-4f43-89da-1070fdb09734" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r990-lsghcef5d6glc9" alt="Product 3">
+                            <h2>Nature Republic California Aloe Daily Sun Block SPF50+ PA++++</h2>
+                            <p>₱525</p>
+                            <a href="https://shopee.ph/Nature-Republic-California-Aloe-Daily-Sun-Block-SPF50-PA--i.80716437.2684292542?sp_atk=63e92da9-e25d-4624-bd49-a36b8eb95cdc&xptdk=63e92da9-e25d-4624-bd49-a36b8eb95cdc" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98v-lu5z085n9m0ia7" alt="Product 4">
+                            <h2>Nature Republic Good Skin Niacinamide Mask Sheet (1+1)</h2>
+                            <p>₱115</p>
+                            <a href="https://shopee.ph/Nature-Republic-Good-Skin-Niacinamide-Mask-Sheet-(1-1)-i.80716437.3686131450?sp_atk=f58e722f-144f-428c-948b-59f7fca20bcb&xptdk=f58e722f-144f-428c-948b-59f7fca20bcb" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98o-lskpdtikcf0505" alt="Product 5">
+                            <h2>NATURE REPUBLIC COLD JUICY FRESH GEL MASK SHEET</h2><br>
+                            <p>₱100</p>
+                            <a href="https://shopee.ph/NATURE-REPUBLIC-COLD-JUICY-FRESH-GEL-MASK-SHEET-i.80716437.24563698391?sp_atk=8b332a65-9ab4-4ad4-99c1-95253e45985e&xptdk=8b332a65-9ab4-4ad4-99c1-95253e45985e" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98p-lvv85sr91hep01" alt="Product 6">
+                            <h2>NATURE REPUBLIC GREEN DERMA MILD CICA DAILY MASK SHEET</h2>
+                            <p>₱745</p>
+                            <a href="https://shopee.ph/NATURE-REPUBLIC-GREEN-DERMA-MILD-CICA-DAILY-MASK-SHEET-i.80716437.27301229788?sp_atk=243e9681-c1d3-4a6b-92f7-82af27a0050e&xptdk=243e9681-c1d3-4a6b-92f7-82af27a0050e" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98x-lu605rm2rp9u45" alt="Product 7">
+                            <h2>Nature Republic Real Nature Tomato Mask Sheet</h2><br>
+                            <p>₱60</p>
+                            <a href="https://shopee.ph/Nature-Republic-Real-Nature-Tomato-Mask-Sheet-i.80716437.9024043963?sp_atk=e732e57c-0f03-412b-83b8-b7f65a8c4098&xptdk=e732e57c-0f03-412b-83b8-b7f65a8c4098" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/e7b29afc8f2d5fba9720a85ab012895a" alt="Product 8">
+                            <h2>Nature Republic Good Skin Aha Ampoule 30 Ml</h2><br>
+                            <p>₱495</p>
+                            <a href="https://shopee.ph/Nature-Republic-Good-Skin-Aha-Ampoule-30-Ml-i.80716437.3467573196?sp_atk=b7bb8c0d-5ab3-47ef-8a77-1dd7776c7edc&xptdk=b7bb8c0d-5ab3-47ef-8a77-1dd7776c7edc" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+        </div>
+            </div>
+        </section>
+
+        <!-- Makeup Section -->
+        <section class="product-section">
+            <div class="container">
+                <h2 class="category-title">Makeup</h2>
+                <div class="row justify-content-around">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98r-lrpqndzlw1fo2c" alt="Product 1">
+                            <h2>NATURE REPUBLIC HONEY MELTING LIP</h2><br><br>
+                            <p>₱575</p>
+                            <a href="https://shopee.ph/NATURE-REPUBLIC-HONEY-MELTING-LIP-i.80716437.25562760091?sp_atk=d0df1af1-64dd-4b5a-864e-6e4b1d7b8c04&xptdk=d0df1af1-64dd-4b5a-864e-6e4b1d7b8c04" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                    <div class="product">
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98y-lvia4iijln814b" alt="Product 2">
+                            <h2>Nature Republic Botanical Micro Slim Fit Eyeliner (01 Black)</h2><br>
+                            <p>₱130</p>
+                            <a href="https://shopee.ph/Nature-Republic-Botanical-Micro-Slim-Fit-Eyeliner-(01-Black)-i.80716437.15467258217?sp_atk=55cd8df8-2d91-4ae3-917f-c556d2c8f8f0&xptdk=55cd8df8-2d91-4ae3-917f-c556d2c8f8f0" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                    <div class="product">
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98x-lu65o9hjkipe73" alt="Product 3">
+                            <h2>Nature Republic Provence Air Skin Fit One Day Lasting Foundation Spf30pa++ (Y21 Pure Vanilla)</h2>
+                            <p>₱565</p>
+                            <a href="https://shopee.ph/Nature-Republic-Provence-Air-Skin-Fit-One-Day-Lasting-Foundation-Spf30pa-(Y21-Pure-Vanilla)-i.80716437.21315163960?sp_atk=9af92cf9-75da-4523-bd9a-2d9e7a9623a1&xptdk=9af92cf9-75da-4523-bd9a-2d9e7a9623a1" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                    <div class="product">
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98p-lu65o9hjrjjmc8" alt="Product 4">
+                            <h2>Nature Republic Glaze Shine Lip Oil 02 Shining Cherry</h2><br>
+                            <p>₱395</p>
+                            <a href="https://shopee.ph/Nature-Republic-Glaze-Shine-Lip-Oil-02-Shining-Cherry-i.80716437.19479304795?sp_atk=60854c85-1b74-4178-af06-c4089f3cd544&xptdk=60854c85-1b74-4178-af06-c4089f3cd544" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hair Section -->
+        <section class="product-section">
+            <div class="container">
+                <h2 class="category-title">Hair Care</h2>
+                <div class="row justify-content-around">
+                    <div class="col-md-4 col-lg-3">
+                        <div class="product">
+                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r992-lu74nmudyegi21" alt="Product 1">
+                            <h2>NATURE REPUBLIC BLACK BEAN ANTI HAIR LOSS SHAMPOO</h2><br>
+                            <p>₱995</p>
+                            <a href="https://shopee.ph/NATURE-REPUBLIC-BLACK-BEAN-ANTI-HAIR-LOSS-SHAMPOO-i.80716437.4365650795?sp_atk=838dd84a-f818-4170-a936-1c7586b94efa&xptdk=838dd84a-f818-4170-a936-1c7586b94efa" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                    <div class="product">
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98w-lu74nmue2m5u30" alt="Product 2">
+                            <h2>Nature Republic Argan Essential Deep Care Shampoo (1000 ML)</h2>
+                            <p>₱1,795</p>
+                            <a href="https://shopee.ph/Nature-Republic-Argan-Essential-Deep-Care-Shampoo-(1000-ML)-i.80716437.3766011054?sp_atk=21861bff-c923-4d8c-a1f9-898408f3feec&xptdk=21861bff-c923-4d8c-a1f9-898408f3feec" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                    <div class="product">
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98z-lu74nmudwzw24a" alt="Product 3">
+                            <h2>Nature Republic Black Bean Anti-hair Loss Treatment</h2><br>
+                            <p>₱895</p>
+                            <a href="https://shopee.ph/Nature-Republic-Black-Bean-Anti-hair-Loss-Treatment-i.80716437.3481703159?sp_atk=07d8e940-b245-4c80-bec1-cadbff8a1ef6&xptdk=07d8e940-b245-4c80-bec1-cadbff8a1ef6" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                    <div class="product">
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7qul3-lk8xqk6jahsf94" alt="Product 4">
+                            <h2>NATURE REPUBLIC HAIR & NATURE HAIR COLOR CREAM (5S NATURAL BROWN)</h2>
+                            <p>₱445</p>
+                            <a href="https://shopee.ph/NATURE-REPUBLIC-HAIR-NATURE-HAIR-COLOR-CREAM-(5S-NATURAL-BROWN)-i.80716437.4781603214?sp_atk=4ca33cb2-7489-470d-8ae1-17d79643d902&xptdk=4ca33cb2-7489-470d-8ae1-17d79643d902" target="_blank">
+                            <button class="add-to-cart-btn">Add to Cart</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nature Republic Philippines. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="https://web.facebook.com/naturerepublicphilippines/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/naturerepublicph/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('#navbarNav');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+
+        // Closes the navbar when clicking outside the navbar
+        document.addEventListener('click', function (e) {
+            if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
+</script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
