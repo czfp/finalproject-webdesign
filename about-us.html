@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nature Republic Philippines</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://bellabeautyiq.com/wp-content/uploads/2021/07/NATUREREPUBLC.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome for icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        body, h1, h2, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+
+        body {
+            font-family: Calibri, sans-serif;
+            line-height: 2.0;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-banner-container {
+            position: relative;
+            background-image: url('https://theme.hstatic.net/200000370337/1000775944/14/header_pageabout.jpg?v=241');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+
+        header {
+            padding: 20px 0;
+        }
+
+        .logo img {
+            max-width: 175px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            gap: 20px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #92bd42;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 0;
+        }
+
+        .about-section {
+            padding: 40px 0;
+        }
+
+        .about-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #7aa035;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px; 
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #92bd42;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #7aa035;
+            border-radius: 0;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #556e25;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner-container {
+                height: 250px;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                gap: 0;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-height: 300px;
+                overflow-y: auto;
+                transition: max-height 0.3s ease;
+            }
+
+            .navbar-toggler {
+                background-color: #92bd42;
+                border-color: #92bd42;
+            }
+
+            .navbar-toggler-icon {
+                background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22m-7 8h7" /%3E%3C/svg%3E');
+            }
+
+            .navbar-nav .nav-item {
+                width: 100%;
+                text-align: center;
+                margin-right: 0;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            .navbar-nav .nav-link {
+                color: #334e00;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                transition: color 0.3s;
+                width: 100%;
+                padding: 10px 30px;
+                box-sizing: border-box;
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: #92bd42;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <div class="header-banner-container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="https://naturerepublic.com.ph/cdn/shop/files/NR_Official_Logo_x20.png?v=1618378505" alt="Nature Republic Logo">
+                    </a>
+                    <!-- Navbar toggler button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Navbar items -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order-now.html">Order Now</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faqs.html">FAQS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <h2>About Us</h2>
+                        <p>NATURE REPUBLIC believes in the power of nature. Founded in 2009, the Korean beauty brand takes on a naturalistic approach by discovering pristine ingredients from around the world and presenting them in their most natural states. Though not certified as organic or natural, its products focus on the use of nature's best gifts such as Californian aloe vera, Moroccan argan, African shea butter, French snail secretion, Bulgarian rose, Polynesian lagoon water and Jeju sparking water.</p>
+                        <br>
+                        <p>Priding itself as an affordable and diverse brand, NATURE REPUBLIC offers an extensive collection of products ranging from skin care and makeup essentials to hair care, body care, beauty tools, nail varnishes and grooming products. NATURE REPUBLIC's aloe vera gel, in particular, is its most popular star item. The brand also successfully appeals to the younger generation and to fans of Korean music and dramas by appointing K-pop and Korean Wave stars like EXO, Rain, JYJ, Girls' Generation's Taeyeon, Shin Se-kyung and Jang Geun-suk as its ambassadors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Nature Republic Philippines. All rights reserved.</p>
+        <ul class="social-icons">
+            <li><a href="https://web.facebook.com/naturerepublicphilippines/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/naturerepublicph/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+<!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('#navbarNav');
+
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+
+        // Closes the navbar when clicking outside the navbar
+        document.addEventListener('click', function (e) {
+            if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
+</script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
